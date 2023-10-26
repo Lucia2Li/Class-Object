@@ -1,0 +1,2 @@
+from _typeshed import Self
+from ej_2 import Point
