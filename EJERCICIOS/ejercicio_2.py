@@ -10,7 +10,5 @@ class Point:
     def __str__(self):
         return f"{self.x} - {self.y}"
     
-    def distance_to(self):  #mal
-        coord = input('Itroduce una coordenada: (x,y)')
-        if coord == list:
-            distancia = math.sqrt((coord[0]-self.x)**2-(coord[1]-self.y))**2
+    def distance_to(self):
+        return math.sqrt((coord[0]-self.x)**2-(coord[1]-self.y))**2

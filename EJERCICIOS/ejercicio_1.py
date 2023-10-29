@@ -4,15 +4,4 @@ class Dice:
     def __init__(self):
         self.sides = 6
     def roll(self):
-        return random.randint(1,self.sides)
-
-#Crear dos dados
-die1 = Dice()
-die2 = Dice()
-
-for idx in range(5):
-    roll1 = die1.roll()
-    roll2 = die2.roll()
-    print(f'Die1 = {roll1} and Die2 = {roll2}' )
-
-#Crear un bucle que te permita hacer los dos dados
+        return random.randint(1,self.sides) 
