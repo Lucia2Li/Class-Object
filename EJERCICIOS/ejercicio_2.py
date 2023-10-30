@@ -1,5 +1,6 @@
 #ejercicio 2
 import math
+
 class Point:
     def __init__(self, x: int, y: int):
         self.__x =x
@@ -9,14 +10,14 @@ class Point:
         return self.__x
     @x.setter
     def x(self,value):
-        return self.__x = value
+        self.__x = value
     
     @property
     def y(self):
         return self.__y
-    @property
+    @y.setter
     def y(self):
-        return self.__y = value
+        self.__y = value
 
     def invert_coordinates(self):
         if isinstance(self.__x,int) and isinstance(self.__y, int):
@@ -28,4 +29,6 @@ class Point:
     
     def distance_to(self, value):
         return math.sqrt((self.__x-value.x)**2 + (self.__y-value.y**2))
-        
+
+p1 = Point(2,3)
+print(p1)
