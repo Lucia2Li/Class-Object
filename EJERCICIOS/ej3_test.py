@@ -4,8 +4,3 @@ from ejercicio_2 import Point
 p1 = Point(2,7)
 p2 = Point(5,8)
 
-r1 = Rectangle(p1,p2)
-
-r1.area()
-
-print(r1)
