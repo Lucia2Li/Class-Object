@@ -20,15 +20,10 @@ class Point:
         self.__y = value
 
     def invert_coordinates(self):
-        if isinstance(self.__x,int) and isinstance(self.__y, int):
-            self.__x,self.__y = self.__y,self.__x
-        else:
-            raise TypeError(f"{self.__x} and {self.__y} are not instances of int")
+        self.__x,self.__y = self.__y,self.__x
+       
     def __str__(self):
         return f"({self.x}, {self.y})"
     
     def distance_to(self, value):
-        return math.sqrt((self.__x-value.x)**2 + (self.__y-value.y**2))
-
-p1 = Point(2,3)
-print(p1)
+        return math.sqrt((self.__x - value.x)**2 + (self.__y - value.y)**2)
