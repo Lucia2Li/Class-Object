@@ -1,14 +1,20 @@
 #ejercicio 2
 import math
 class Point:
-    def __init__(self, x=0, y=0):
-        self.x = x
-        self.y = y
-    def invert_coordinates(self):
-        if isinstance(self.x,int) and isinstance(self.y, int):
-            self.x, self.y = self.y, self.x
-    def __str__(self):
-        return f"{self.x} - {self.y}"
+    def __init__(self, x: int, y: int):
+        self.__x =x
+        self.__y = y
+    @property
+    def x(self):
+        if isinstance(self.__x, int):
+            return self.__x
+        else:
+            raise TypeError(f"{self.__x} is not an instance of int")
     
-    def distance_to(self):
-        return math.sqrt((coord[0]-self.x)**2-(coord[1]-self.y))**2
+    @property
+    def y(self):
+        if isinstance(self.__y, int):
+            return self.__y
+        else:
+            raise TypeError(f"{self.__y} is not an instance of int")
+       
