@@ -8,3 +8,4 @@ r1 = Rectangle(p1,p2)
 
 print(r1)
 
+r1.area()
