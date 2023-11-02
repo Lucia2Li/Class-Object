@@ -8,8 +8,9 @@ class Rectangle:
     def __str__(self):
         return f"({self.__p1}, {self.__p2})"
     @property
-    def area(self,p1,p2):
-        return ((self.__p1.x-p2.x)*(self.__p1.y-p2.y))
+    def area(self,other_point):
+        return ((self.__p1.x-other_point.x)*(self.__p1.y-other_point.y))
     @property
-    def perimeter(self,p1,p2):
-        return 2 * ((self.__p1.x-p2.x) + (self.__p1.y-p2.y))
+    def perimeter(self,other_point):
+        return 2 * ((self.__p1.x-other_point.x) + (self.__p1.y-other_point.y))
+
