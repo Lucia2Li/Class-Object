@@ -6,12 +6,21 @@ class Dice:
         self.__faces = faces
         self.__number = number
         self.__num = random.randint(1, 6)
-        
-    def __str__(self):
-        return f"El número del dado es: {self.__num}
+    
+    @property
+    def get_number(self):
+        return self.__number
+    @property
+    def get_faces(self):
+        return self.__faces
+    @face.setter
+    def face(self, value):
+        return self.__faces == value
+    @number.setter
+    def number(self, num):
+        return self.__number ==  num
+    
 
-    def top_face(self, value):
-         return f"El número del dado es: {self.__num} y el top face es: {value}"
 
 
 d1 = Dice()
