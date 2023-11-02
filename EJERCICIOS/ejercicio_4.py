@@ -2,11 +2,13 @@
 import random
 
 class Dice:
-    def __init__(self):
+    def __init__(self, faces = 6, number = 0):
+        self.__faces = faces
+        self.__number = number
         self.__num = random.randint(1, 6)
         
     def __str__(self):
-        return f"El número del dado es: {self.__num}"
+        return f"El número del dado es: {self.__num}
 
     def top_face(self, value):
          return f"El número del dado es: {self.__num} y el top face es: {value}"
