@@ -9,12 +9,21 @@ class Rectangle:
 
     def __str__(self):
         return f"({self.__p1}, {self.__p2})"
-    @property
+    
+    @area.setter
     def area(self,other_point):
         return ((self.__p1.x-other_point.x)*(self.__p1.y-other_point.y))
-    @property
+    @perimeter.setter
     def perimeter(self,other_point):
         return 2 * ((self.__p1.x-other_point.x) + (self.__p1.y-other_point.y))
+    @property
+    def get_area(self):
+        return self.__area
+    @property
+    def get_perimeter(self):
+        return self.__perimeter
+    
+    
     
     
 
