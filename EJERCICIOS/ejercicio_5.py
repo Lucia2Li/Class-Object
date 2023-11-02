@@ -12,3 +12,5 @@ class Terminal:
            return self.__phone_number
        else:
            raise ValueError("Invalid phone number please enter another one")
+       
+    
