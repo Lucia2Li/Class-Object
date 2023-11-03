@@ -4,33 +4,25 @@ import random
 
 
 class Dice:
-    def __init__(self, faces = 6, number = 0):
+    def __init__(self, faces = 6, number_on_top = 0):
         self.__faces = faces
-        self.__number = number
-
-    
-    @property
-    def get_number(self):
-        return self.__number
-    @property
-    def get_faces(self):
-        return self.__faces
-    @face.setter
-    def face(self, value):
-        return self.__faces == value
-    @num.setter
-    def num(self, numero):
-         if self.__number == 0:
-            return random.randint(1,self.number)
-         else: 
-             return self.__number == numero
-
-    
+        if number_on_top == 0:
+            self.__number_on_top = random.randint(1,self.__number_on_top)
+        else:
+            self.__number_on_top = number_on_top
+        
+        @num.setter
+        def num(self,value):
+            return self.__number_on_top = value
+        @property
+        def get_number_on_top(self):
+            return self.__number_on_top
+        @face.setter
+        def face(self, value):
+            return f"El número de encima es {value} y el número de caras es {self.__faces} "
 
 
 
-d1 = Dice()
-print(d1)
 
 
 
