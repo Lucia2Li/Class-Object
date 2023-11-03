@@ -13,7 +13,7 @@ class Dice:
         
         @num.setter
         def num(self,value):
-            return self.__number_on_top = value
+            return self.__number_on_top == value
         @property
         def get_number_on_top(self):
             return self.__number_on_top
