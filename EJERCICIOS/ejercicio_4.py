@@ -8,20 +8,20 @@ class Dice:
             self.__number = random.randint(1,self.__faces)
         else:
             self.__number = number
-        @property
-        def number(self):
-            return self.__number
-        @number.setter
-        def number(self,value):
-            self.__number = value
-        @property
-        def face(self):
-            return self.__faces
-        @face.setter
-        def face(self,value):
-            self.__faces = value
+    @property
+    def number(self):
+        return self.__number
+    @number.setter
+    def number(self,value):
+        self.__number = value
+    @property
+    def face(self):
+        return self.__faces
+    @face.setter
+    def face(self,value):
+        self.__faces = value
         
-        def __repr__(self):
-            return f"El número es {self.__number} y el número de caras del dado es: {self.__faces}"
-        def roll (self):
-            self.__number = random.randint(1,self.__faces)
+    def __repr__(self):
+        return f"El número es {self.__number} y el número de caras del dado es: {self.__faces}"
+    def roll (self):
+        self.__number = random.randint(1,self.__faces)
