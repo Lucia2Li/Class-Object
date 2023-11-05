@@ -14,7 +14,7 @@ class Rectangle:
     def area(self):
         return ((self.__p1.x-self.__p2.x)*(self.__p1.y-self.__p2.y))
     @perimeter.setter
-    def perimeter(self,other_point):
+    def perimeter(self):
         return 2 * ((self.__p1.x-self.__2.x) + (self.__p1.y-self.__p2.y))
     @property
     def get_area(self):
