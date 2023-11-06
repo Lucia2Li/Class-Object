@@ -1,4 +1,4 @@
-from ejercicio_1 import Dice
+from Die import Dice
 
 #Crear dos dados
 die1 = Dice()

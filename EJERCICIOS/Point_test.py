@@ -1,4 +1,4 @@
-from ejercicio_2 import Point
+from Point import Point
 #Create a Point
 p3 = Point(6,2)
 #Print its coordinate x

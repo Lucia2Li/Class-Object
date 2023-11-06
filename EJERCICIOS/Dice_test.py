@@ -1,4 +1,4 @@
-from ejercicio_4 import Dice
+from Dice import Dice
 
 d1 = Dice()
 d2 = Dice(8)

@@ -1,5 +1,5 @@
-from ejercicio_3 import Rectangle
-from ejercicio_2 import Point
+from Rectangle import Rectangle
+from Point import Point
 
 p1 = Point(2, 8)
 p2 = Point(4, 5)

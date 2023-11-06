@@ -1,4 +1,4 @@
-from ejercicio_2 import Point
+from Point import Point
 
 class Rectangle:
     def __init__(self, p1, p2):
