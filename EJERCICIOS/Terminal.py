@@ -12,7 +12,8 @@ class Terminal:
         lista = ["9","6","7"]
         if valor[0] in lista and len(valor) == 9 and valor.isdigit():
             self.__phone_number = valor
-    
+
+
         
 
 
