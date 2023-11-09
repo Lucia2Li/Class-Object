@@ -5,6 +5,7 @@ class Point:
     def __init__(self, x: int, y: int):
         self.x =x
         self.y = y
+
     @property
     def x(self):
         return self.__x
@@ -14,7 +15,7 @@ class Point:
     
     @property
     def y(self):
-        return self.y
+        return self.__y
     @y.setter
     def y(self,value):
         self.y = value
@@ -25,5 +26,6 @@ class Point:
     def __str__(self):
         return f"({self.x}, {self.y})"
     
-    def distance_to(self, value):
-        return math.sqrt((self.x - value.x)**2 + (self.y - value.y)**2)
+    def distance_to(self, other_point):
+        return math.sqrt((self.x - other_point.x)**2 + (self.y - other_point.y)**2)
+    #self.x getter

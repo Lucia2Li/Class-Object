@@ -2,10 +2,10 @@ from Point import Point
 
 class Rectangle:
     def __init__(self, p1, p2):
-        self.__p1 = p1
-        self.__p2 = p2
-        self.__area = 0
-        self.__perimeter = 0
+        self.p1 = p1
+        self.p2 = p2
+        self.area = 0
+        self.perimeter = 0
 
     @property
     def area(self):
