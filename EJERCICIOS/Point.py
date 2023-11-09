@@ -3,8 +3,8 @@ import math
 
 class Point:
     def __init__(self, x: int, y: int):
-        self.__x =x
-        self.__y = y
+        self.x =x
+        self.y = y
     @property
     def x(self):
         return self.__x
@@ -16,7 +16,7 @@ class Point:
     def y(self):
         return self.__y
     @y.setter
-    def y(self):
+    def y(self,value):
         self.__y = value
 
     def invert_coordinates(self):

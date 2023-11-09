@@ -5,9 +5,9 @@ class Dice:
     def __init__(self, faces = 6, number = 0):
         self.__faces = faces
         if number == 0:
-            self.__number = random.randint(1,self.__faces)
+            self.number = random.randint(1,self.faces)
         else:
-            self.__number = number
+            self.number = number
     @property
     def number(self):
         return self.__number
@@ -22,6 +22,6 @@ class Dice:
         self.__faces = value
         
     def __repr__(self):
-        return f"El número es {self.__number} y el número de caras del dado es: {self.__faces}"
+        return f"El número es {self.number} y el número de caras del dado es: {self.__faces}"
     def roll (self):
-        self.__number = random.randint(1,self.__faces)
+        self.number = random.randint(1,self.__faces)
