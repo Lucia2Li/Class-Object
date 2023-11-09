@@ -22,7 +22,7 @@ class Point:
 
     def invert_coordinates(self):
         self.x,self.y = self.y,self.x
-       
+       #SETTER = GETTER
     def __str__(self):
         return f"({self.x}, {self.y})"
     

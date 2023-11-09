@@ -18,7 +18,7 @@ class Rectangle:
         return self.__perimeter
 
     def __str__(self):
-        return f"({self.__p1}, {self.__p2})"
+        return f"({self.p1}, {self.p2})"
 
 
     

@@ -22,6 +22,6 @@ class Dice:
         self.__faces = value
         
     def __repr__(self):
-        return f"El número es {self.number} y el número de caras del dado es: {self.__faces}"
+        return f"El número es {self.number} y el número de caras del dado es: {self.faces}"
     def roll (self):
-        self.number = random.randint(1,self.__faces)
+        self.number = random.randint(1,self.faces)

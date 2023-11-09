@@ -8,10 +8,10 @@ class Terminal:
         return self.__phone_number
     
     @phone_number.setter
-    def phone_number(self, valor):
+    def phone_number(self, teléfono):
         lista = ["9","6","7"]
-        if valor[0] in lista and len(valor) == 9 and valor.isdigit():
-            self.__phone_number = valor
+        if teléfono[0] in lista and len(teléfono) == 9 and teléfono.isdigit():
+            self.__phone_number = teléfono
 
 
         
