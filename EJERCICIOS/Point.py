@@ -14,16 +14,16 @@ class Point:
     
     @property
     def y(self):
-        return self.__y
+        return self.y
     @y.setter
     def y(self,value):
-        self.__y = value
+        self.y = value
 
     def invert_coordinates(self):
-        self.__x,self.__y = self.__y,self.__x
+        self.x,self.y = self.y,self.x
        
     def __str__(self):
         return f"({self.x}, {self.y})"
     
     def distance_to(self, value):
-        return math.sqrt((self.__x - value.x)**2 + (self.__y - value.y)**2)
+        return math.sqrt((self.x - value.x)**2 + (self.y - value.y)**2)
