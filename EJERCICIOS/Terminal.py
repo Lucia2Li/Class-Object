@@ -12,6 +12,7 @@ class Terminal:
         lista = ["9","6","7"]
         if teléfono[0] in lista and len(teléfono) == 9 and teléfono.isdigit():
             self.__phone_number = teléfono
+    
 
 
         
