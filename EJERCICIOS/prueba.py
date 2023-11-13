@@ -7,3 +7,7 @@ class Person:
         new = Person(self.name, self.id, self.age)
         return new
     
+joe =Person("Joe","shsf",20)
+copy = joe.copy()
+copy.age = 18
+print(joe.age)
