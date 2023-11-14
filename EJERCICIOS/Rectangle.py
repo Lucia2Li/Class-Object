@@ -9,13 +9,13 @@ class Rectangle:
 
     @property
     def area(self):
-        self.__area = abs((self.__p1.x - self.__p2.x) * (self.__p1.y - self.__p2.y))
-        return self.__area
+        self.area = ((self.p1.x - self.p2.x) * (self.p1.y - self.p2.y))
+        return self.area
 
     @property
     def perimeter(self):
-        self.__perimeter = 2 * ((self.__p1.x - self.__p2.x) + (self.__p1.y - self.__p2.y))
-        return self.__perimeter
+        self.perimeter = 2 * ((self.p1.x - self.p2.x) + (self.p1.y - self.p2.y))
+        return self.perimeter
 
     def __str__(self):
         return f"({self.p1}, {self.p2})"
