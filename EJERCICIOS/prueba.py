@@ -1,20 +1,19 @@
-import random
-
-class Dice:
-    def __init__(self):
-        self.__faces = 6
-
+class Point:
+    def __init__(self, x: int, y: int):
+        self.x = x
+        self.y = y
     @property
-    def faces(self):
-        return self.__faces
+    def x(self):
+        return self.__x
+    @x.setter
+    def x(self,value):
+        if isinstance(value,int):
+            self.x = value
+    @property
+    def y(self):
+        return self.__y
+    @y.setter
+    def y(self,value):
+        if isinstance(value,int):
+            self.y = value
     
-    def roll(self):
-        return random.randint(1,self.faces)
-    
-die1 = Dice()
-die2 = Dice()
-
-for idx in range(5):
-    roll1 = die1.roll()
-    roll2 = die2.roll()
-    print(f'Die1 = {roll1} and Die2 = {roll2}' )
