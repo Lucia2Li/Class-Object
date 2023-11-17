@@ -24,6 +24,4 @@ class Dice:
     
     def roll (self):
         self.number = random.randint(1,self.faces)
-        
-d1 = Dice()
-print(d1)
+
