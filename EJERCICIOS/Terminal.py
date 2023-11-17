@@ -3,6 +3,7 @@ class Terminal:
     def __init__(self,phone_number):
         self.phone_number = phone_number
         
+        
     @property
     def phone_number(self):
         return self.__phone_number
@@ -15,11 +16,13 @@ class Terminal:
         else:
             raise ValueError("El número es incorrecto")
         
+   
+        
     def __str__(self):
         return f"El número de teléfono es {self.phone_number}"
    
 t1 = Terminal("966112233")
-print(t1)
+t2 = Terminal("666744459")
 
 
 
