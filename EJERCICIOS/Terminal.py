@@ -1,11 +1,9 @@
-#Implementación de la clase terminal
-
 class Terminal:
     def __init__(self,phone_number):
         self.phone_number = phone_number
-        self.time_call = 0
-        self.tiempo_recieved = 0
-        self.total_time = 0
+        self.__time_call = 0
+        self.__time_received = 0
+        self.__total_time = 0
     @property
     def phone_number(self):
         return self.__phone_number
@@ -20,15 +18,33 @@ class Terminal:
     def time_call(self):
         return self.__time_call
     @time_call.setter
-    def time_call(self,tiempo):
-        self.__time_call += tiempo
-        self.__total_time += tiempo
+    def time_call(self,time):
+        self.__time_call += time
+        self.__total_time += time
     
     @property
-    def time_recieved(self):
-        return self.__time_recieved
-    @time_recieved(self)
-
-
-
-
+    def time_received(self):
+        return self.__time_received
+    @time_received.setter
+    def time_received(self,time):
+        self.__time_received = time
+        self.__total_time = time
+    
+    def call(self, other_phone, time):
+        self.time_call = time
+        other_phone.time_received = time
+    def __str__(self):
+        return f"{self.__phone_number}-Conversation time: {self.__total_time}"
+    
+t1 = Terminal("666112233")
+t2 = Terminal("666744459")
+t3 = Terminal("632128919")
+t4 = Terminal("664135818")
+print(t1)
+print(t2)
+t1.call(t2, 420)
+t1.call(t3, 210)
+print(t1)
+print(t2)
+print(t3)
+print(t4)
