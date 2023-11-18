@@ -1,54 +1,33 @@
-#Implemtación de la clase Terminal
+#Implementación de la clase terminal
+
 class Terminal:
     def __init__(self,phone_number):
         self.phone_number = phone_number
-        self.tiempo = 0
-        self.tiempo_total = 0
-        self.tiempo_recivido = 0
-        
-        
+        self.time_call = 0
+        self.tiempo_recieved = 0
+        self.total_time = 0
     @property
     def phone_number(self):
         return self.__phone_number
-    
     @phone_number.setter
-    def phone_number(self, telefono):
-        lista = ["9","6","7"]
-        if telefono[0] in lista and len(telefono) == 9 and telefono.isdigit():
-            self.__phone_number = telefono
+    def phone_number(self,phone_number):
+        if phone_number[0] in ["9","7","6"] and len(phone_number) == 9 and phone_number.isdigit():
+            self.__phone_number = phone_number
         else:
-            raise ValueError("El número es incorrecto")
+            raise ValueError
+        
     @property
-    def tiempo(self):
-        return self.__tiempo
-    @tiempo.setter
-    def tiempo(self,tiempo_llamada):
-        self.tiempo += tiempo_llamada
-        self.tiempo_total += tiempo_llamada
+    def time_call(self):
+        return self.__time_call
+    @time_call.setter
+    def time_call(self,tiempo):
+        self.__time_call += tiempo
+        self.__total_time += tiempo
     
     @property
-    def tiempo_recibido(self):
-        return self.tiempo_recibido
-    
-    @tiempo_recibido.setter
-    def tiempo_recibido(self, tiempo_llamada):
-        self.tiempo_recibido = tiempo_llamada
-        self.tiempo_total = tiempo_llamada 
-
-    def __str__(self):
-        return f"El número de teléfono es {self.phone_number}"
-   
-t1 = Terminal("966112233")
-t2 = Terminal("666744459")
-
-print(t1)
-
-
-        
-
-        
-
-
+    def time_recieved(self):
+        return self.__time_recieved
+    @time_recieved(self)
 
 
 
