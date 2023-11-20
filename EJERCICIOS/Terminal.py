@@ -49,6 +49,7 @@ print(t2)
 print(t3)
 print(t4)
 
+
 class Mobile(Terminal):
     def __init__(self, phone_number, rate):
         super().__init__(phone_number)
@@ -68,18 +69,13 @@ class Mobile(Terminal):
             self.__rate = 0.03
         else:
             raise ValueError("Rate incorrecto")
+        
     @property
     def charge(self):
         return self.__charge
     @charge.setter
     def charge(self,tiempo):
         self.__charge = super().time_call * self.__rate
-    
-    def __str__(self):
-        return f"{super().phone_number}-{super().total_time}s"
-    
-m1 = Mobile("666112233", "rat")
-print(m1)
-        
 
+    
        
