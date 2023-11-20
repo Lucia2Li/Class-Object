@@ -62,11 +62,11 @@ class Mobile(Terminal):
     @rate.setter
     def rate(self,value):
         if value == "rat":
-            self.__rate = 0.05
+            self.__rate = 0.05/60
         elif value == "monkey":
-            self.__rate = 0.015
+            self.__rate = 0.015/60
         elif value == "elephant":
-            self.__rate = 0.03
+            self.__rate = 0.03/60
         else:
             raise ValueError("Rate incorrecto")
         
@@ -76,6 +76,8 @@ class Mobile(Terminal):
     @charge.setter
     def charge(self,tiempo):
         self.__charge = super().time_call * self.__rate
-
+    
+    def __str__(self):
+        return f"{super().phone_number}-{super().total_time}s of conversation - charged {self.charge}€"
     
        
