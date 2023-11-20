@@ -63,11 +63,18 @@ class Mobile(Terminal):
     def charge(self):
         return self.__charge
     @charge.setter
-    def charge(self,tiempo):
-        self.__charge = super().time_call * self.__rate
+    def charge(self, charge):
+        self.__charge = charge
+    
+    def call(self, terminal, time):
+        super().call(terminal, time)
+        self.charge= super().time_call * self.rate
 
     
+
+
     def __str__(self):
+        self.charge
         return f"{super().phone_number} - {super().total_time()}s of conversation - charged {self.charge}€"
 
 
