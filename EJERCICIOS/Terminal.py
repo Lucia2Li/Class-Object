@@ -67,8 +67,8 @@ class Mobile(Terminal):
             self.__rate = 0.03
         else:
             raise ValueError("Rate incorrecto")
-
-
+    
+    
 
 
         
