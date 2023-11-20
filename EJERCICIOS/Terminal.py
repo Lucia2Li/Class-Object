@@ -65,7 +65,7 @@ class Mobile(Terminal):
     @charge.setter
     def charge(self,tiempo):
         self.__charge = super().time_call * self.__rate
-    
+
     
     
     def __str__(self):
