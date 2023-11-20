@@ -48,3 +48,27 @@ print(t1)
 print(t2)
 print(t3)
 print(t4)
+
+class Mobile(Terminal):
+    def __init__(self, phone_number, rate):
+        super().__init__(phone_number)
+        self.rate = rate
+
+    @property
+    def rate(self):
+        return self.__rate
+    @rate.setter
+    def rate(self,value):
+        if value == "rat":
+            self.__rate = "0,05"
+        elif value == "monkey":
+            self.__rate = "0,015"
+        elif value == "elephant":
+            self.__rate = "0,03"
+        else:
+            raise ValueError("Rate incorrecto")
+
+
+
+
+        
