@@ -74,7 +74,12 @@ class Mobile(Terminal):
     @charge.setter
     def charge(self,tiempo):
         self.__charge = super().time_call * self.__rate
-      
-
+    
+    def __str__(self):
+        return f"{super().phone_number}-{super().total_time}s"
+    
+m1 = Mobile("666112233", "rat")
+print(m1)
+        
 
        
