@@ -60,11 +60,11 @@ class Mobile(Terminal):
     @rate.setter
     def rate(self,value):
         if value == "rat":
-            self.__rate = "0,05"
+            self.__rate = 0.05
         elif value == "monkey":
-            self.__rate = "0,015"
+            self.__rate = 0.015
         elif value == "elephant":
-            self.__rate = "0,03"
+            self.__rate = 0.03
         else:
             raise ValueError("Rate incorrecto")
 
