@@ -2,10 +2,7 @@ class Terminal:
     def __init__(self,phone_number):
         self.phone_number = phone_number
         self.__time_call = 0
-        self.__time_received = 0
-
-    def total_time(self):
-        return self.time_call+self.time_received    
+        self.__time_received = 0   
 
     @property
     def phone_number(self):
@@ -31,9 +28,12 @@ class Terminal:
     def time_received(self,time):
         self.__time_received += time
     
+    def total_time(self):
+        return self.time_call+self.time_received   
+
     def call(self, other_phone, time):
         self.time_call = time
-        other_phone.time_received = time
+        other_phone.time_received += time
     def __str__(self):
         return f"{self.phone_number}-Conversation time: {self.total_time()}"
 
@@ -53,7 +53,7 @@ class Mobile(Terminal):
         if value == "rat":
             self.__rate = 0.05/60
         elif value == "monkey":
-            self.__rate = 0.015/60
+            self.__rate = 0.15/60
         elif value == "elephant":
             self.__rate = 0.03/60
         else:
