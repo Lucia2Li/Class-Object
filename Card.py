@@ -38,9 +38,20 @@ class Card:
             self.__set_card.append(card)
 
 #Robar una carta de una baraja
-        def draw(self,deck):
-            card = deck.draw()
-            self.receive(card)
-            
+        #def draw(self,deck):
+
+#Decartar una carta
+        #def discard(self,card):
+            #self.remove(card)
+
+    class Deck:
+        def __init__(self):
+            self.cards = []
+
+#Método shuffle     
+
+
+
+
 
 
