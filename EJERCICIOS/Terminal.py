@@ -12,7 +12,7 @@ class Terminal:
         if phone_number[0] in ["9","7","6"] and len(phone_number) == 9 and phone_number.isdigit():
             self.__phone_number = phone_number
         else:
-            raise ValueError
+            raise ValueError("El télefono introducido es incorrecto")
         
     @property
     def time_call(self):
