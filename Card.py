@@ -60,7 +60,9 @@ class Card:
 #Método shuffle: baraja una lista  
         def shuffle(self):
             random.shuffle(self.deck)
-    
+#Método draw: the first card can be taken from the deck
+        def draw(self):
+            self.deck.pop(0)
 
 
 
