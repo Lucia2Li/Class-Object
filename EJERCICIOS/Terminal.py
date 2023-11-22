@@ -49,12 +49,12 @@ class Mobile(Terminal):
     def rate(self):
         return self.__rate
     @rate.setter
-    def rate(self,value):
-        if value == "rat":
+    def rate(self,rate):
+        if rate == "rat":
             self.__rate = 0.05/60
-        elif value == "monkey":
+        elif rate == "monkey":
             self.__rate = 0.15/60
-        elif value == "elephant":
+        elif rate == "elephant":
             self.__rate = 0.03/60
         else:
             raise ValueError("Rate incorrecto")
