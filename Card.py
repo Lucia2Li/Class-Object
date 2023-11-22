@@ -1,3 +1,4 @@
+import random
 #Creación de clases
 #1.  Card to simulate a playing card. A playing card has a suit (from a set of suits) and a
 #value (from a set of values).
@@ -46,10 +47,20 @@ class Card:
 
     class Deck:
         def __init__(self):
-            self.cards = []
+            self.deck = []
 
-#Método shuffle     
+        @property
+        def deck(self):
+            return self.__deck
+        @deck.setter
+        def deck(self,cards):
+            self.__deck = cards
+        
 
+#Método shuffle: baraja una lista  
+        def shuffle(self):
+            random.shuffle(self.deck)
+    
 
 
 
