@@ -1,8 +1,8 @@
 class Terminal:
     def __init__(self,phone_number):
         self.phone_number = phone_number
-        self.__time_call = 0
-        self.__time_received = 0   
+        self.time_call = 0
+        self.time_received = 0   
 
     @property
     def phone_number(self):
@@ -19,20 +19,21 @@ class Terminal:
         return self.__time_call
     @time_call.setter
     def time_call(self,time):
-        self.__time_call += time
+        self.__time_call = time
     
     @property
     def time_received(self):
         return self.__time_received
+    
     @time_received.setter
     def time_received(self,time):
-        self.__time_received += time
+        self.__time_received = time
     
     def total_time(self):
         return self.time_call+self.time_received   
 
     def call(self, other_phone, time):
-        self.time_call = time
+        self.time_call += time
         other_phone.time_received += time
     def __str__(self):
         return f"{self.phone_number}-Conversation time: {self.total_time()}"

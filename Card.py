@@ -27,7 +27,7 @@ class Card:
 #Class Hand
     class Hand:
         def __init__(self):
-            self.set_card = []
+            self.set_card = []  #vacio...
         @property
         def set_card(self):
             return self.__set_card
@@ -63,6 +63,13 @@ class Card:
 #Método draw: the first card can be taken from the deck
         def draw(self):
             self.deck.pop(0)
+
+#Deal a set of cards to a player, those cards are removed from the deck.
+        def deal(self,other_player):
+            return "Hola"
+#remove cards
+        def remove(self,card):
+            self.deck.remove(card)
 
 
 
