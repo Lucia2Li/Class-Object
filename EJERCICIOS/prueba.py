@@ -14,6 +14,5 @@ for numero in lista_externa:
                 print(numero,letra,signo,animal)
 
 
-  
 
     
