@@ -34,12 +34,6 @@ class Card:
         @set_card.setter
         def set_card(self,cards):
             self.__set_cards = cards
-#Recibir una carta
-        def receive(self,card):
-            self.__set_card.append(card)
-
-#Robar una carta de una baraja
-     
 
 #Decartar una carta
         def discard(self,card):
@@ -74,5 +68,5 @@ class Card:
 
 
 
-
+#hand.draw(deck.pop)
 
