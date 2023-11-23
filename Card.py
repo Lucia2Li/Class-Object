@@ -38,6 +38,8 @@ class Card:
 #Decartar una carta
         def discard(self,card):
             self.remove(card)
+        def draw(self, card):
+            self.set_card.append(card)
 
     class Deck:
         def __init__(self):
@@ -68,5 +70,5 @@ class Card:
 
 
 
-#hand.draw(deck.pop)
+#hand.draw(deck.pop)/hand_out
 
