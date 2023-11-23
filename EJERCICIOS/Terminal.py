@@ -32,9 +32,9 @@ class Terminal:
     def total_time(self):
         return self.time_call+self.time_received   
 
-    def call(self, other_phone, time):
+    def call(self, terminal, time):
         self.time_call += time
-        other_phone.time_received += time
+        terminal.time_received += time
     def __str__(self):
         return f"{self.phone_number}-Conversation time: {self.total_time()}"
 
