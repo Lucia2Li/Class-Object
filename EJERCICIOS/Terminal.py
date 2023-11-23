@@ -1,5 +1,5 @@
 class Terminal:
-    def __init__(self,phone_number):
+    def __init__(self,phone_number: str):
         self.phone_number = phone_number
         self.time_call = 0
         self.time_received = 0   
@@ -78,6 +78,10 @@ class Mobile(Terminal):
         self.charge
         return f"{super().phone_number} - {super().total_time()}s of conversation - charged {self.charge}€"
 
+
+
+#a += 1
+#print(a)
 
 
 
