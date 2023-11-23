@@ -19,7 +19,12 @@ class Terminal:
         return self.__time_call
     @time_call.setter
     def time_call(self,time):
-        self.__time_call = time
+
+        if isinstance(time, int) == True and time>=0:
+            self.__time_call = time
+        else: 
+            raise ValueError("El tiempo es un número entero y positivo")
+        
     
     @property
     def time_received(self):
@@ -27,6 +32,12 @@ class Terminal:
     
     @time_received.setter
     def time_received(self,time):
+        if isinstance(time, int) == True and time>=0:
+            self.__received = time
+        else:
+            raise ValueError("El tiempo es un número entero y positivo")
+               
+        
         self.__time_received = time
     
     def total_time(self):
@@ -84,4 +95,6 @@ class Mobile(Terminal):
 #print(a)
 
 
+
+#Usar el getter más el incremento
 
