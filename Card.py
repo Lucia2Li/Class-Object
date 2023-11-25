@@ -24,18 +24,18 @@ class Card:
     
     def __str__(self):
         return f"{self.suit}, {self.value}"
-    
-#Class Hand
-class Hand:
-    def __init__(self):
-        self.cards = []  
 
+#CLASS CARD
+
+class Card:
+    def __init__(self):
+        self.cards = []
     @property
     def cards(self):
-        return self.__set_card
+        return self.__cards
     @cards.setter
-    def cards(self,cards):
-        self.__cards = cards
+    def cards(self,card):
+        self.__cards = card
 
 #Decartar una carta
     def discard(self,card):
