@@ -27,14 +27,14 @@ class Card:
 #Class Hand
 class Hand:
     def __init__(self):
-        self.set_card = []  #vacio...
+        self.cards = []  #vacio...
 
     @property
-    def set_card(self):
+    def cards(self):
         return self.__set_card
-    @set_card.setter
-    def set_card(self,cards):
-        self.__set_cards = cards
+    @cards.setter
+    def cards(self,cards):
+        self.__cards = cards
 
 #Decartar una carta
     def discard(self,card):
