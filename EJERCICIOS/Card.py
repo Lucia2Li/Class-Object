@@ -93,9 +93,9 @@ class Spanish_deck(Deck):
     values = ["A","2","3","4","5","6","7","8","9","10","11","12","13"]
     
     def __init__(self):
-        super().__init__(self.suits,self.values)
+        super().__init__(Spanish_deck.suits,Spanish_deck.values)
 
-    def __rpr__(self):
+    def __str__(self):
         return f"Spanish Deck: {', '.join(map(str, self.deck))}"
 
 
@@ -103,9 +103,9 @@ class English_deck(Deck):
     suits = ["Clubs","Spades","Hearts","Diamonds"]
     values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
     def __init__(self):
-        super().__init__(self.suits,self.values)
+        super().__init__(English_deck.suits,English_deck.values)
 
-    def __rpr__(self):
+    def __str__(self):
         return f"English Deck: {', '.join(map(str, self.deck))}"
 
 
