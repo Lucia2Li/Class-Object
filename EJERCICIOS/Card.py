@@ -81,7 +81,7 @@ class Deck:
         self.deck.append(Card(s,v))
 
 #remove cards
-    def remove(self,cards):
+    def remove_cards(self,cards):
         for card in cards:
             if card in self.deck:
                 self.deck.remove(card)
@@ -104,6 +104,9 @@ class English_deck(Deck):
     values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
     def __init__(self):
         super().__init__(self.suits,self.values)
+
     def __str__(self):
         return f"English Deck: {', '.join(map(str, self.deck))}"
+
+
 
