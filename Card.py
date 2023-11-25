@@ -70,3 +70,10 @@ class Deck:
 #hand.draw(deck.pop)/hand_out
 
 class Spanish_deck(Deck):
+    suits = ["Oros","Copas","Bastos","Espadas"]
+    values = ["A","2","3","4","5","6","7","8","9","10","11","12","13"]
+
+
+class English_deck(Deck):
+    suits = ["Clubs","Spades","Hearts","Diamonds"]
+    values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
