@@ -90,10 +90,14 @@ class Deck:
 class Spanish_deck(Deck):
     suits = ["Oros","Copas","Bastos","Espadas"]
     values = ["A","2","3","4","5","6","7","8","9","10","11","12","13"]
-
+    
+    def __init__(self):
+        super().__init__(self.suits,self.values)
 
 class English_deck(Deck):
     suits = ["Clubs","Spades","Hearts","Diamonds"]
     values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
-
+    def __init__(self):
+        super().__init__(self.suits,self.values)
+        
 
