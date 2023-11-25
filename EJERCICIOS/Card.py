@@ -95,7 +95,7 @@ class Spanish_deck(Deck):
     def __init__(self):
         super().__init__(self.suits,self.values)
 
-    def __str__(self):
+    def __rpr__(self):
         return f"Spanish Deck: {', '.join(map(str, self.deck))}"
 
 
@@ -105,7 +105,7 @@ class English_deck(Deck):
     def __init__(self):
         super().__init__(self.suits,self.values)
 
-    def __str__(self):
+    def __rpr__(self):
         return f"English Deck: {', '.join(map(str, self.deck))}"
 
 
