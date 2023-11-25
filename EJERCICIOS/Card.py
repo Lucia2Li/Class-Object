@@ -64,7 +64,7 @@ class Deck:
         random.shuffle(self.deck)
 #Método draw: the first card can be taken from the deck
     def hand_out(self):
-        self.deck.pop(0)
+        return self.deck.pop(0)
 
 #Deal a set of cards to a player, those cards are removed from the deck.
     def deal(self,other_player,num):
@@ -72,7 +72,7 @@ class Deck:
             return None
         card_deal = self.deck[:num]
         other_player.draw(card_deal)
-        self.remove(card_deal)
+        self.remove_cards(card_deal)
 #draw
     def draw(self,cards):
         self.cards.extend(cards)
@@ -95,10 +95,15 @@ class Spanish_deck(Deck):
     def __init__(self):
         super().__init__(self.suits,self.values)
 
+    def __str__(self):
+        return f"Spanish Deck: {', '.join(map(str, self.deck))}"
+
+
 class English_deck(Deck):
     suits = ["Clubs","Spades","Hearts","Diamonds"]
     values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
     def __init__(self):
         super().__init__(self.suits,self.values)
-        
+    def __str__(self):
+        return f"English Deck: {', '.join(map(str, self.deck))}"
 
