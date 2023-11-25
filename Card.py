@@ -45,8 +45,11 @@ class Hand:
 
 #CLASS DECK
 class Deck:
-    def __init__(self):
+    def __init__(self,suits,values):
         self.deck = []
+        for s in suits:
+            for v in values:
+                self.deck.añadir(s,v)
 
     @property
     def deck(self):
@@ -73,6 +76,9 @@ class Deck:
 #draw
     def draw(self,cards):
         self.cards.extend(cards)
+#añadir
+    def añadir(self,s,v):
+        self.deck.append(Card(s,v))
 
 #remove cards
     def remove(self,card):
