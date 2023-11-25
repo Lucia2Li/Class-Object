@@ -28,6 +28,7 @@ class Card:
 class Hand:
     def __init__(self):
         self.set_card = []  #vacio...
+
     @property
     def set_card(self):
         return self.__set_card
@@ -65,7 +66,8 @@ class Deck:
         return "Hola"
 #remove cards
     def remove(self,card):
-        self.deck.remove(card)
+        if card in self.deck:
+            self.deck.remove(card)
 
 #hand.draw(deck.pop)/hand_out
 
