@@ -25,9 +25,9 @@ class Card:
     def __str__(self):
         return f"{self.suit}, {self.value}"
 
-#CLASS CARD
+#CLASS Hand
 
-class Card:
+class Hand:
     def __init__(self):
         self.cards = []
     @property
