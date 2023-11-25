@@ -2,6 +2,7 @@ import random
 #Creación de clases
 #1.  Card to simulate a playing card. A playing card has a suit (from a set of suits) and a
 #value (from a set of values).
+
 class Card:
     def __init_(self, suit, value):
         self.suit = suit
@@ -27,7 +28,7 @@ class Card:
 #Class Hand
 class Hand:
     def __init__(self):
-        self.cards = []  #vacio...
+        self.cards = []  
 
     @property
     def cards(self):
@@ -42,6 +43,7 @@ class Hand:
     def draw(self, card):
         self.set_card.append(card)
 
+#CLASS DECK
 class Deck:
     def __init__(self):
         self.deck = []
@@ -62,15 +64,23 @@ class Deck:
         self.deck.pop(0)
 
 #Deal a set of cards to a player, those cards are removed from the deck.
-    def deal(self,other_player):
-        return "Hola"
+    def deal(self,other_player,num):
+        if len(self.deck) < num:
+            return None
+        card_deal = self.deck[:num]
+        other_player.draw(card_deal)
+        self.remove(card_deal)
+#draw
+    def draw(self,cards):
+        self.cards.extend(cards)
+
 #remove cards
     def remove(self,card):
         if card in self.deck:
             self.deck.remove(card)
 
 #hand.draw(deck.pop)/hand_out
-
+#CLASS
 class Spanish_deck(Deck):
     suits = ["Oros","Copas","Bastos","Espadas"]
     values = ["A","2","3","4","5","6","7","8","9","10","11","12","13"]
@@ -79,3 +89,5 @@ class Spanish_deck(Deck):
 class English_deck(Deck):
     suits = ["Clubs","Spades","Hearts","Diamonds"]
     values = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+
+
