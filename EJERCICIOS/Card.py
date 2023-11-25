@@ -37,11 +37,11 @@ class Hand:
     def cards(self,card):
         self.__cards = card
 
-#Decartar una carta
     def discard(self,card):
-        self.remove(card)
-    def draw(self, card):
-        self.set_card.append(card)
+        self.cards.remove(card)
+    
+    def draw(self,card):
+        self.cards.append(card)
 
 #CLASS DECK
 class Deck:
@@ -49,7 +49,7 @@ class Deck:
         self.deck = []
         for s in suits:
             for v in values:
-                self.deck.añadir(s,v)
+                self.añadir(s,v)
 
     @property
     def deck(self):
@@ -81,9 +81,10 @@ class Deck:
         self.deck.append(Card(s,v))
 
 #remove cards
-    def remove(self,card):
-        if card in self.deck:
-            self.deck.remove(card)
+    def remove(self,cards):
+        for card in cards:
+            if card in self.deck:
+                self.deck.remove(card)
 
 #hand.draw(deck.pop)/hand_out
 #CLASS
