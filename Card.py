@@ -4,7 +4,7 @@ import random
 #value (from a set of values).
 
 class Card:
-    def __init_(self, suit, value):
+    def __init__(self, suit, value):
         self.suit = suit
         self.value = value
 #Suit
@@ -23,7 +23,7 @@ class Card:
         self.__value = value
     
     def __str__(self):
-        return f"{self.card}-{self.value}"
+        return f"{self.suit}, {self.value}"
     
 #Class Hand
 class Hand:
