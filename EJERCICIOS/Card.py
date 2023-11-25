@@ -74,7 +74,7 @@ class Deck:
         other_player.draw(card_deal)
         self.remove_cards(card_deal)
 #draw
-    def draw(self,cards):
+    def extend(self,cards):
         self.cards.extend(cards)
 #añadir
     def añadir(self,s,v):
