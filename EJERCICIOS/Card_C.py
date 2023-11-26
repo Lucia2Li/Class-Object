@@ -122,4 +122,11 @@ class Player:
     def name(self, player_name):
         if isinstance(str,player_name):
             self.__name = player_name
+ 
+class BlackJackGame: # Initialize the game’s attributes: an English deck, a player and a dealer.
+    def __init__(self,dealer): 
+        self.English_deck = English_deck()
+        self.playerblack = Player()
+        self.dealer = dealer #???
+
     
