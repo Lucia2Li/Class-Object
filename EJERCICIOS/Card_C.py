@@ -110,12 +110,14 @@ class English_deck(Deck): #It inherits from Deck class.
         return f"English deck: {', '.join(map(str, self.deck))}"
 
 class Player:
-    def __init__(self, name):
+    def __init__(self, name): #Initialize the player’s attributes: name and ***hand.
         self.name = name
-        self.hand = Hand()
+        self.hand = Hand() #???
+
     @property
     def name(self):
         return self.__name.capitalize()
+    
     @name.setter
     def name(self, player_name):
         if isinstance(str,player_name):
