@@ -144,5 +144,14 @@ class BlackJackGame: # Initialize the game’s attributes: an English deck, a pl
         self.playerblack = Player()
         self.dealer = dealer #???
 
-  
+    def start_game(self):
+        self.English_deck = English_deck()
+        self.English_deck.shuffle()
+        self.player.hand = Hand()
+        self.dealer.hand = Hand()
+        
+        for _ in range(2):
+            self.player.hand.receive_card(self.English_deck.draw_card())
+            self.dealer.hand.receive_card(self.English_deck.draw_card())
+
     
