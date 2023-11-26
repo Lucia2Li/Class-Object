@@ -11,20 +11,30 @@ class Card:
     def __init__(self, suit, value):#Initialize the attributes for the suit and value of the card.
         self.suit = suit
         self.value = value
-
+#Suit
     @property
     def suit(self):
         return self.__suit
     @suit.setter
     def suit(self, s):
         self.__suit = s
-    
+#Value    
     @property
     def value(self):
         return self.__value
     @value.setter
     def value(self,v):
         self.__value = v
+
+    def get_numeric_value(self):
+        if self.value in ["J", "Q", "K"]:
+            return 10
+        elif self.value == "A":
+            return 11
+        else:
+            return int(self.value)
+            
+
     
 #Hand to simulate card-player hand, i.e., a set of playing cards that a player has. Players
 # can draw a card from a deck. Once drawn, the player has one more card, and the deck
