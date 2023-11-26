@@ -47,6 +47,9 @@ class Hand:
     def discard_card(self,card):
         self.cards.remove(card)
 
+    def add_card(self,s,v): 
+        self.cards.append(Card(s,v))
+
 
 #Deck to simulate a deck of playing cards. Initially, it contains the cards that are provided
 # with the constructor. It can deal a set of cards to a player. Those cards are removed from
@@ -55,7 +58,9 @@ class Hand:
 class Deck:
     def __init__(self, suits, values):  
         self.deck = []#Initialize an empty deck of cards
-        
+        for suit in suits:
+            for value in values:
+                self.deck.append(Card(suit,value))
 
     @property
     def deck(self):
@@ -129,4 +134,5 @@ class BlackJackGame: # Initialize the game’s attributes: an English deck, a pl
         self.playerblack = Player()
         self.dealer = dealer #???
 
+  
     
