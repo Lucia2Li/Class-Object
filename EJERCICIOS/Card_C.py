@@ -59,6 +59,21 @@ class Hand:
 
     def add_card(self,s,v): 
         self.cards.append(Card(s,v))
+    
+    def total_value(self):
+        total_value = 0
+        num_aces = 0
+        for card in self.cards:
+            total_value += card.get_numeric_value()
+            
+            if card.value == "A":
+                num_aces += 1
+
+        while total_value > 21 and num_aces:
+            total_value -= 10  # Tratar un As como 1 en lugar de 11
+            num_aces -= 1
+
+        return total_value, num_aces
 
 
 #Deck to simulate a deck of playing cards. Initially, it contains the cards that are provided
@@ -149,9 +164,15 @@ class BlackJackGame: # Initialize the game’s attributes: an English deck, a pl
         self.English_deck.shuffle()
         self.player.hand = Hand()
         self.dealer.hand = Hand()
-        
+
         for _ in range(2):
             self.player.hand.receive_card(self.English_deck.draw_card())
             self.dealer.hand.receive_card(self.English_deck.draw_card())
 
-    
+    def player_hit(self):
+        new_card = self.English_deck.draw_card()
+        self.player.hand.receive_card(new_card)
+
+        
+
+       
