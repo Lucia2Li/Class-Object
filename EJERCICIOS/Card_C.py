@@ -156,7 +156,7 @@ class Player:
 class BlackJackGame: # Initialize the game’s attributes: an English deck, a player and a dealer.
     def __init__(self,dealer): 
         self.English_deck = English_deck()
-        self.playerblack = Player()
+        self.player = Player()
         self.dealer = dealer #???
 
     def start_game(self):
