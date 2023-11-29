@@ -25,6 +25,9 @@ class Card:
     @value.setter
     def value(self,v):
         self.__value = v
+    
+    def __str__(self):
+        return f"{self.suit}, {self.value}"
 
     def get_numeric_value(self):
         if self.value in ["J", "Q", "K"]:
@@ -178,5 +181,3 @@ class BlackJackGame: # Initialize the game’s attributes: an English deck, a pl
             new_card = self.English_deck.draw_card()
             self.dealer.hand.receive_card(new_card)
     
-c1 = Card("Hola", 2)
-print(c1)
