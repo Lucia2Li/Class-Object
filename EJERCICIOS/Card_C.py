@@ -178,4 +178,5 @@ class BlackJackGame: # Initialize the game’s attributes: an English deck, a pl
             new_card = self.English_deck.draw_card()
             self.dealer.hand.receive_card(new_card)
     
-       
+c1 = Card("Hola", 2)
+print(c1)
