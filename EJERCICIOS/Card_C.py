@@ -98,7 +98,7 @@ class Deck:
         self.__deck = card
     
     def draw_card(self):
-        self.deck.pop(0)
+        return self.deck.pop(0)
 
     def shuffle(self):  #Implement the method to shuffle the deck.
         random.shuffle(self.deck)
@@ -153,7 +153,7 @@ class Player:
     
     @name.setter
     def name(self, player_name):
-        if isinstance(str,player_name):
+        if isinstance(player_name, str):
             self.__name = player_name
  
 class BlackJackGame: # Initialize the game’s attributes: an English deck, a player and a dealer.
@@ -177,7 +177,7 @@ class BlackJackGame: # Initialize the game’s attributes: an English deck, a pl
         self.player.hand.receive_card(new_card)
 
     def dealer_hit(self):
-        if self.dealer.hand <= 16:
+        if self.dealer.hand.total_value() <= 16:
             new_card = self.English_deck.draw_card()
             self.dealer.hand.receive_card(new_card)
     
