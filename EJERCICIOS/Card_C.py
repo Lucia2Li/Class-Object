@@ -50,7 +50,7 @@ class Hand:
         return self.__cards
     @cards.setter
     def cards(self,value):
-        self.cards = value
+        self.__cards = value
     
     def recieve_card(self,card):
         self.cards.append(card)
