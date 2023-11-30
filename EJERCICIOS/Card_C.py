@@ -5,8 +5,6 @@ import random
 #Card to simulate a playing card. A playing card has a suit (from a set of suits) and a 
 # value (from a set of values).
 
-
-
 class Card:
     def __init__(self, suit, value):#Initialize the attributes for the suit and value of the card.
         self.suit = suit
